@@ -22,13 +22,18 @@ function NewSign() {
     })
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    addSign({ variables: formState })
+  }
+
   return (
     <div className="flex justify-center items-center flex-col mt-20">
       <h1 className="text-3xl mb-10">Sign the Real-World Next.js signbook!</h1>
 
       <form
         className="max-w-7xl shadow-xl bg-purple-50 p-7mb-10 grid grid-rows-1 gap-4 rounded-md border-2 border- purple-800"
-        onSubmit={() => addSign({ variables: formState })}
+        onSubmit={handleSubmit}
       >
         <div>
           <label htmlFor="nickname" className="text-purple-900 mb-2">

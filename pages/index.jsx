@@ -25,7 +25,7 @@ export default function Home() {
       </Link>
 
       <div>
-        {data.sign.map((sign) => (
+        {data.signs.map((sign) => (
           <BaseSign key={sign.uuid} {...sign} />
         ))}
       </div>
